@@ -15,6 +15,13 @@ const H2 = ({ children }) => {
     </h2>
   );
 };
+const H3 = ({ children }) => {
+  return (
+    <h3 className="text-black text-[17px] font-bold leading-[16px]">
+      {children}
+    </h3>
+  );
+};
 const H4 = ({ children }) => {
   return (
     <h2 className="text-black text-[20px] font-bold leading-[26px]">
@@ -26,7 +33,7 @@ const H4 = ({ children }) => {
 const P = ({ children, color = "black" }) => {
   return (
     <>
-      <p className={`text-[14px] ${color} Cera Pro leading-[16px] font-medium`}>
+      <p className={`text-[17px] ${color} Cera Pro leading-[16px] font-medium`}>
         {children}
       </p>
     </>
@@ -42,4 +49,4 @@ const SmallP = ({ children, color = "text-green" }) => {
   );
 };
 
-export { H1, H2, H4, P, SmallP };
+export { H1, H2, H3, H4, P, SmallP };
