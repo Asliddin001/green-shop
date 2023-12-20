@@ -250,13 +250,7 @@ const flowersShop = [
     image: "https://i.ibb.co/MgHgt2d/02.png",
     price: "$415.35",
     discountPrice: "$625",
-  },
-  {
-    id: "m16",
-    name: "01",
-    image: "https://i.ibb.co/ZdMpf0H/01.png",
-    price: "$445.24",
-  },
+  }
 ];
 
 const categoriesData = [
