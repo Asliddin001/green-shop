@@ -11,7 +11,7 @@ const linkBaseStyle =
 
 export const Navbar = () => {
   return (
-    <div className="container">
+    <div className="relative">
       <nav className="dfrowc justify-between py-[33px] transition-all .5s">
         <div className="logo">
           <Link to="/">
@@ -57,6 +57,7 @@ export const Navbar = () => {
           </Button>
         </div>
       </nav>
+      <hr className="absolute  mt-[-20px] w-full" />
     </div>
   );
 };

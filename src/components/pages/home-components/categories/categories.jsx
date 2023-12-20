@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "@mui/material/Slider";
 import { P } from "../../../common/headings/headings";
 import categoriesImg from "/mock-imges/img/categories-img.png";
-import { Card } from "./card/card";
+import { Card } from "../../../common/card/card";
 import { categoriesData, flowers } from "../../../../data/data";
 
 export const Categories = () => {
@@ -83,7 +83,7 @@ export const Categories = () => {
       </div>
 
       <main className="w-full dfcol">
-        <div className="dfrowc justify-between">
+        <div className="dfrowc justify-between mb-[31px]">
           <ul className="flex gap-[37px]">
             {["All Plants", "New Arrivals", "Sale"].map((navItem, index) => (
               <li

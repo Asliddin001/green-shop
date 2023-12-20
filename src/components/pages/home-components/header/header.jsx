@@ -25,12 +25,14 @@ export const Header = () => {
             <div className="w-[540px] z-10 dfcol gap-[55px] items-start">
               <div className="dfcol gap-[6px]">
                 <P>Welcome to GreenShop</P>
-                <H1>
-                  Let’s Make a Better{" "}
-                  <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
-                    Planet
-                  </span>
-                </H1>
+                <div className="uppercase">
+                  <H1>
+                    Let’s Make a Better{" "}
+                    <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
+                      Planet
+                    </span>
+                  </H1>
+                </div>
                 <P color="text-grey-1">
                   We are an online plant shop offering a wide range of cheap and
                   trendy plants. Use our plants to create a unique Urban Jungle.
@@ -49,12 +51,14 @@ export const Header = () => {
             <div className="w-[540px] z-10 dfcol gap-[55px] items-start">
               <div className="dfcol gap-[6px]">
                 <P>Welcome to GreenShop</P>
-                <H1>
-                  Let’s Make a Better{" "}
-                  <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
-                    Planet
-                  </span>
-                </H1>
+                <div className="uppercase">
+                  <H1>
+                    Let’s Make a Better{" "}
+                    <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
+                      Planet
+                    </span>
+                  </H1>
+                </div>
                 <P color="text-grey-1">
                   We are an online plant shop offering a wide range of cheap and
                   trendy plants. Use our plants to create a unique Urban Jungle.
@@ -73,12 +77,14 @@ export const Header = () => {
             <div className="w-[540px] z-10 dfcol gap-[55px] items-start">
               <div className="dfcol gap-[6px]">
                 <P>Welcome to GreenShop</P>
-                <H1>
-                  Let’s Make a Better{" "}
-                  <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
-                    Planet
-                  </span>
-                </H1>
+                <div className="uppercase">
+                  <H1>
+                    Let’s Make a Better{" "}
+                    <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
+                      Planet
+                    </span>
+                  </H1>
+                </div>
                 <P color="text-grey-1">
                   We are an online plant shop offering a wide range of cheap and
                   trendy plants. Use our plants to create a unique Urban Jungle.
