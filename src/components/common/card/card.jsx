@@ -6,9 +6,15 @@ import { useDispatch } from "react-redux";
 import currencyFormatter from "../../../constants/currensy";
 import { flowerAction } from "../../../features/flowers-slice";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export const Card = ({ items }) => {
   const dispatch = useDispatch();
+  const notify = () => toast("Flower added");
+
   const addOrder = (item) => {
+    notify();
     dispatch(flowerAction.addFlower(item));
   };
 
@@ -16,7 +22,19 @@ export const Card = ({ items }) => {
     <>
       {items.map((item) => (
         <div key={item.id} className="card-container relative group">
-          <div className="h-[300px] flex items-center justify-center object-cover  bg-grey relative">
+          <div className="h-[300px] flex  items-center justify-center object-cover bg-grey relative">
+            <ToastContainer
+              position="top-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
             <img
               src={item.imgUrl}
               alt=""

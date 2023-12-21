@@ -69,7 +69,9 @@ export const Navbar = ({ toggleTheme }) => {
         <div className="logos dfrowc space-x-4 ">
           <CiSearch size={25} />
           <div className="dfrowc relative">
-            <FiShoppingCart size={25} />
+            <Link to="/Shop">
+              <FiShoppingCart size={25} />
+            </Link>
             <span className="absolute bg-green w-[18px] h-[18px] dfrowc justify-center mt-[-12px] ml-[15px] rounded-full text-white text-[15px] font-medium transition-all duration-300">
               {order}
             </span>
