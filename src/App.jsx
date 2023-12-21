@@ -31,30 +31,34 @@ function App() {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
   }, [theme]);
-
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   return (
-    <div className="container">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />}>
-          <Route path="shopping-cart" element={<Cart />} />
-          <Route path="checkout" element={<Checkout />} />
-        </Route>
-        <Route path="/account" element={<Account />}>
-          <Route path="shopping-details" element={<AccountDetails />} />
-          <Route path="address" element={<Address />} />
-          <Route path="downloads" element={<Downloads />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="reports" element={<Reports />} />
-          <Route path="support" element={<Support />} />
-          <Route path="wishlist" element={<Wishlist />} />
-        </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
+    <div className="">
+      <div className="container dark:text-white">
+        <Navbar toggleTheme={toggleTheme} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />}>
+            <Route path="shopping-cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
+          </Route>
+          <Route path="/account" element={<Account />}>
+            <Route path="shopping-details" element={<AccountDetails />} />
+            <Route path="address" element={<Address />} />
+            <Route path="downloads" element={<Downloads />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="reports" element={<Reports />} />
+            <Route path="support" element={<Support />} />
+            <Route path="wishlist" element={<Wishlist />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
     </div>
   );
 }

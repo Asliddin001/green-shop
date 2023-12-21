@@ -3,7 +3,7 @@ import React from "react";
 
 const H1 = ({ children }) => {
   return (
-    <h1 className="text-black text-[70px] font-extrabold leading-[70px]">
+    <h1 className="text-black dark:text-white text-[70px] font-extrabold leading-[70px]">
       {children}
     </h1>
   );
@@ -11,21 +11,21 @@ const H1 = ({ children }) => {
 
 const H2 = ({ children }) => {
   return (
-    <h2 className="text-black text-[30px] font-bold leading-[16px]">
+    <h2 className="text-black dark:text-white text-[30px] font-bold leading-[16px]">
       {children}
     </h2>
   );
 };
 const H3 = ({ children }) => {
   return (
-    <h3 className="text-black text-[17px] font-bold leading-[16px]">
+    <h3 className="text-black dark:text-white text-[17px] font-bold leading-[16px]">
       {children}
     </h3>
   );
 };
 const H4 = ({ children }) => {
   return (
-    <h2 className="text-black text-[20px] font-bold leading-[26px]">
+    <h2 className="text-black dark:text-white text-[20px] font-bold leading-[26px]">
       {children}
     </h2>
   );
@@ -34,14 +34,17 @@ const H4 = ({ children }) => {
 /* custom heading */
 const CH = ({ children, size = "text-[28px]", color = "text-black" }) => {
   return (
-    <h2 className={`${color} ${size} font-bold leading-[26px]`}>{children}</h2>
+    <h2 className={`${color} ${size} dark:text-white font-bold leading-[26px]`}>
+      {children}
+    </h2>
   );
 };
 
 const P = ({ children, color = "black" }) => {
   return (
     <>
-      <p className={`text-[17px] ${color} Cera Pro leading-[24px] font-medium`}>
+      <p
+        className={`text-[17px]  dark:text-white ${color} Cera Pro leading-[24px] font-medium`}>
         {children}
       </p>
     </>
@@ -50,7 +53,8 @@ const P = ({ children, color = "black" }) => {
 const SmallP = ({ children, color = "text-green" }) => {
   return (
     <>
-      <p className={`text-[14px] ${color} Cera Pro leading-[16px] font-medium`}>
+      <p
+        className={`text-[14px] dark:text-white  ${color} Cera Pro leading-[16px] font-medium`}>
         {children}
       </p>
     </>

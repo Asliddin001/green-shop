@@ -5,13 +5,18 @@ import SearchIcon from "/mock-imges/icons/search-icon.svg";
 import ShopIcon from "/mock-imges/icons/shop-icon.svg";
 import logOut from "/mock-imges/icons/exit-account.svg";
 import Button from "../../common/button/button";
+import Brightness6Icon from "@mui/icons-material/Brightness6";
 
 const linkBaseStyle =
-  "hover:underline hover:font-semibold hover:text-green-700 transition-all duration-300 text-black underline-offset-[25px]";
+  "hover:underline hover:font-semibold hover:text-green-700 transition-all duration-300 text-black underline-offset-[25px] dark:text-white";
 
-export const Navbar = () => {
+export const Navbar = ({toggleTheme}) => {
+
+  const themeHandler = () =>{
+    toggleTheme()
+  }
   return (
-    <div className="relative">
+    <div className="relative dark:text-white">
       <nav className="dfrowc justify-between py-[33px] transition-all .5s">
         <div className="logo">
           <Link to="/">
@@ -40,7 +45,12 @@ export const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="logos dfrowc space-x-4">
+        <div className="">
+          <span onClick={themeHandler} className="cursor-pointer">
+            <Brightness6Icon />
+          </span>
+        </div>
+        <div className="logos dfrowc space-x-4 ">
           <div className="">
             <img src={SearchIcon} alt="Search" className="cursor-pointer" />
           </div>

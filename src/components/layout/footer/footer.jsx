@@ -38,7 +38,7 @@ export const Footer = () => {
   return (
     <>
       <footer className="mt-[100px] ">
-        <div className="flex bg-grey px-[23px] py-[25px]">
+        <div className="flex dark:bg-slate-900  bg-grey px-[23px] py-[25px]">
           {footerTopData.map((data, i) => (
             <div
               key={i}
@@ -92,7 +92,7 @@ export const Footer = () => {
             <SmallP color="text-black">+88 01911 717 490</SmallP>
           </div>
         </div>
-        <div className="bg-grey dfcol">
+        <div className="dark:bg-slate-900  bg-grey dfcol">
           <div className="container mx-auto p-8 flex-grow">
             <div className="flex justify-between">
               <div className="px-4 mb-8">
@@ -142,14 +142,15 @@ export const Footer = () => {
                   </span>
                 </div>
                 <H3>We accept</H3>
-                <div className="mt-[13px  ]">
+                <div className="mt-[13px]">
                   <img src={footerImg} alt="" />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white text-black text-center py-4">
+          <div
+            className="dark:bg-slate-900       bg-white text-black dark:text-white text-center py-4">
             <p>© 2021 GreenShop. All Rights Reserved.</p>
           </div>
         </div>

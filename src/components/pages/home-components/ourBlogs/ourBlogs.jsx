@@ -37,7 +37,7 @@ const blogData = [
 export const OurBlogs = () => {
   return (
     <>
-      <div className="mt-[138px] dfcol gap-[15px] text-center">
+      <div className="mt-[138px] dfcol gap-[15px] text-center dark:text-white dark:bg-slate-900">
         <H2>Our Blog Posts</H2>
         <P color="text-grey-1">
           We are an online plant shop offering a wide range of cheap and trendy
@@ -46,7 +46,7 @@ export const OurBlogs = () => {
       </div>
       <div className="cards dfrowc gap-[44px] mt-[35px]">
         {blogData.map((data) => (
-          <div key={data.id} className="card bg-grey w-[268px]">
+          <div key={data.id} className="card bg-grey dark:text-white dark:bg-slate-900  w-[268px]">
             <div className="w-[268px]">
               <img src={data.img} alt="" className="w-full" />
             </div>

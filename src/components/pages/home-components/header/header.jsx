@@ -11,7 +11,7 @@ import Button from "../../../common/button/button";
 
 export const Header = () => {
   return (
-    <div className="container">
+    <div className="dark:bg-slate-900 dark:text-white">
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={50}
@@ -21,8 +21,8 @@ export const Header = () => {
         onSwiper={(swiper) => swiper}
         onSlideChange={() => "Slide change"}>
         <SwiperSlide>
-          <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r from-gray-50 via-gray-50 to-gray-50 ">
-            <div className="w-[540px] z-10 dfcol gap-[55px] items-start">
+          <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r   dark:bg-slate-900">
+            <div className="w-[540px] z-10 dfcol gap-[55px] items-start dark:bg-slate-900">
               <div className="dfcol gap-[6px]">
                 <P>Welcome to GreenShop</P>
                 <div className="uppercase">
