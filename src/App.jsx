@@ -34,6 +34,7 @@ function App() {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
   return (
     <div className="">
       <div className="container dark:text-white">

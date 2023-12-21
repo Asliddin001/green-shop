@@ -11,7 +11,7 @@ import heart from "/mock-imges/icons/heart-green.svg";
 
 const SizeOption = ({ size }) => {
   return (
-    <button className="w-[40px] mt-[11px] mb-[23px] h-[40px] flex items-center justify-center focus:border-green focus:text-green text-center border-[1px] px-4 rounded-full cursor-pointer transition-all duration-300 ease-in-out">
+    <button className="w-[40px] mt-[11px] mb-[23px] h-[40px] flex items-center justify-center focus:border-green  focus:text-green text-center border-[1px] px-4 rounded-full cursor-pointer transition-all duration-300 ease-in-out">
       <P>{size}</P>
     </button>
   );
@@ -36,14 +36,14 @@ export const Cart = () => {
             <b>Home</b>/Shop
           </p>
         </div>
-        <div className="flex gap-[52px]">
-          <div className="card h-[453px] ">
+        <div className="flex gap-[52px] mt-[43px]">
+          <div className="card h-[480px] ">
             <div className="flex gap-[29px]">
-              <div className="imgs ">
+              <div className="imgs dcol gap-[16px]">
                 {imageList.map((image, index) => (
                   <div
                     key={index}
-                    className="w-[100px] cursor-pointer"
+                    className="w-[100px] cursor-pointer mb-[16px]"
                     onClick={() => setSelectedImage(index)}>
                     <img
                       src={image}

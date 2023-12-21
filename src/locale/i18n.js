@@ -5,14 +5,17 @@ import translationsRu from "./translationsRu";
 import translationsUz from "./translationsUz";
 
 i18n.use(initReactI18next).init({
-  resources:{
-    en:{translation: translationsEn},
-    ru:{translation: translationsRu},
-    uz:{translation: translationsUz}
+  resources: {
+    en: { translation: translationsEn },
+    uz: { translation: translationsUz },
+    ru: { translation: translationsRu },
   },
-  lng:"ru",
-  fallbackLng:"en"
-})
+  lng: "en",
+  fallbackLng: "en",
+});
+
+export const changeLang = (value) => {
+  i18n.changeLanguage(value);
+};
 
 export default i18n;
-

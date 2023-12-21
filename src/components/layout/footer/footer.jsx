@@ -1,7 +1,7 @@
 import React from "react";
 import { H3, SmallP } from "../../common/headings/headings";
 import { Input } from "../../common/input/input";
-import logo from "/public/mock-imges/icons/logo.svg";
+import logo from "/mock-imges/icons/logo.svg";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
@@ -149,8 +149,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div
-            className="dark:bg-slate-900       bg-white text-black dark:text-white text-center py-4">
+          <div className="dark:bg-slate-900       bg-white text-black dark:text-white text-center py-4">
             <p>© 2021 GreenShop. All Rights Reserved.</p>
           </div>
         </div>

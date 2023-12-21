@@ -1,22 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "/public/mock-imges/icons/logo.svg";
-import SearchIcon from "/mock-imges/icons/search-icon.svg";
-import ShopIcon from "/mock-imges/icons/shop-icon.svg";
+import logo from "/mock-imges/icons/logo.svg";
 import logOut from "/mock-imges/icons/exit-account.svg";
 import Button from "../../common/button/button";
 import Brightness6Icon from "@mui/icons-material/Brightness6";
+import { useTranslation } from "react-i18next";
+import { changeLang } from "../../../locale/i18n";
+import { CiSearch } from "react-icons/ci";
+import { FiShoppingCart } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 const linkBaseStyle =
-  "hover:underline hover:font-semibold hover:text-green-700 transition-all duration-300 text-black underline-offset-[25px] dark:text-white";
+  "capitalize hover:underline hover:font-semibold hover:text-green-700 transition-all duration-300 text-black underline-offset-[25px] dark:text-white";
 
-export const Navbar = ({toggleTheme}) => {
+export const Navbar = ({ toggleTheme }) => {
+  const order = useSelector((state) => state.cart.flowers.length);
+  const flowers = useSelector((state) => state.cart.flowers);
+  console.log(flowers);
+  const { t } = useTranslation();
 
-  const themeHandler = () =>{
-    toggleTheme()
-  }
+  const themeHandler = () => toggleTheme();
+  const changeLanguage = (e) => changeLang(e.target.value);
+
   return (
-    <div className="relative dark:text-white">
+    <div className="relative dark:text-white bg-white dark:bg-slate-900">
       <nav className="dfrowc justify-between py-[33px] transition-all .5s">
         <div className="logo">
           <Link to="/">
@@ -26,22 +33,22 @@ export const Navbar = ({toggleTheme}) => {
         <ul className="flex space-x-4">
           <li>
             <Link to="/" className={`${linkBaseStyle}`}>
-              Home
+              {t("home")}
             </Link>
           </li>
           <li>
             <Link to="/Shop" className={`${linkBaseStyle}`}>
-              Shop
+              {t("shop")}
             </Link>
           </li>
           <li>
             <Link to="/Plant" className={`${linkBaseStyle}`}>
-              Plant Care
+              {t("plantCare")}
             </Link>
           </li>
           <li>
             <Link to="/contact" className={`${linkBaseStyle}`}>
-              Blogs
+              {t("blogs")}
             </Link>
           </li>
         </ul>
@@ -50,24 +57,28 @@ export const Navbar = ({toggleTheme}) => {
             <Brightness6Icon />
           </span>
         </div>
+        <div className="">
+          <select
+            onChange={changeLanguage}
+            className="dark:text-white dark:bg-slate-900">
+            <option value="en">{t("en")}</option>
+            <option value="uz">{t("uz")}</option>
+            <option value="ru">{t("ru")}</option>
+          </select>
+        </div>
         <div className="logos dfrowc space-x-4 ">
-          <div className="">
-            <img src={SearchIcon} alt="Search" className="cursor-pointer" />
-          </div>
-
+          <CiSearch size={25} />
           <div className="dfrowc relative">
-            <img src={ShopIcon} alt="Shop" className="cursor-pointer" />
-            <span className="absolute bg-green w-[12px] h-[12px] dfrowc justify-center mt-[-12px] ml-[15px] rounded-full text-white text-[10px] font-medium transition-all duration-300">
-              6
+            <FiShoppingCart size={25} />
+            <span className="absolute bg-green w-[18px] h-[18px] dfrowc justify-center mt-[-12px] ml-[15px] rounded-full text-white text-[15px] font-medium transition-all duration-300">
+              {order}
             </span>
           </div>
-
           <Button type={"btn1"} iconLeft={logOut}>
-            Button
+            {t("navBtn")}
           </Button>
         </div>
       </nav>
-      <hr className="absolute  mt-[-20px] w-full" />
     </div>
   );
 };

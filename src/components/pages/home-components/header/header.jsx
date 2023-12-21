@@ -6,10 +6,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/swiper-bundle.css";
 import { H1, P } from "../../../common/headings/headings";
-import heroSlide from "../../../../../public/mock-imges/img/hero-slide-1.png";
+import heroSlide from "/mock-imges/img/hero-slide-1.png";
 import Button from "../../../common/button/button";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="dark:bg-slate-900 dark:text-white">
       <Swiper
@@ -24,12 +27,12 @@ export const Header = () => {
           <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r   dark:bg-slate-900">
             <div className="w-[540px] z-10 dfcol gap-[55px] items-start dark:bg-slate-900">
               <div className="dfcol gap-[6px]">
-                <P>Welcome to GreenShop</P>
+                <P>{t("welcome")}</P>
                 <div className="uppercase">
                   <H1>
-                    Let’s Make a Better{" "}
+                    {t("lets")}
                     <span className="text-green font-cera-pro font-extrabold text-[70px] leading-70 uppercase">
-                      Planet
+                      {t("lets2")}
                     </span>
                   </H1>
                 </div>
@@ -47,7 +50,7 @@ export const Header = () => {
           </header>
         </SwiperSlide>
         <SwiperSlide>
-          <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r from-gray-50 via-gray-50 to-gray-50 ">
+          <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r dark:bg-slate-900 ">
             <div className="w-[540px] z-10 dfcol gap-[55px] items-start">
               <div className="dfcol gap-[6px]">
                 <P>Welcome to GreenShop</P>
@@ -73,7 +76,7 @@ export const Header = () => {
           </header>
         </SwiperSlide>
         <SwiperSlide>
-          <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r from-gray-50 via-gray-50 to-gray-50 ">
+          <header className="w-full h-[450px] relative flex justify-between p-[40px] bg-gradient-to-r dark:bg-slate-900 ">
             <div className="w-[540px] z-10 dfcol gap-[55px] items-start">
               <div className="dfcol gap-[6px]">
                 <P>Welcome to GreenShop</P>
