@@ -23,7 +23,7 @@ export const Navbar = ({ toggleTheme }) => {
   const changeLanguage = (e) => changeLang(e.target.value);
 
   return (
-    <div className="relative dark:text-white bg-white dark:bg-slate-900">
+    <div className="sticky top-0 z-10  dark:text-white bg-white dark:bg-slate-900">
       <nav className="dfrowc justify-between py-[33px] transition-all .5s">
         <div className="logo">
           <Link to="/">

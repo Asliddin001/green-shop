@@ -3,7 +3,6 @@ import shopImg1 from "/mock-imges/img/shop-card-1.png";
 import shopImg2 from "/mock-imges/img/shop-card-2.png";
 import shopImg3 from "/mock-imges/img/shop-card-3.png";
 import shopImg4 from "/mock-imges/img/shop-card-4.png";
-import search from "/mock-imges/icons/search-icon.svg";
 import { CH, P, SmallP } from "../../../components/common/headings/headings";
 import StarIcon from "@mui/icons-material/Star";
 import Button from "../../../components/common/button/button";
